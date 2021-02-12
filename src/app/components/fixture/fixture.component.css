@@ -1,12 +1,40 @@
-.badge{
-    width: 40px;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-
-    border-style:solid;
+.fix {
+    display: grid;
+    grid-template-columns: 45% 5% 5% 45%;
     border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+    border-style:hidden;
+    margin-bottom: 0.5%;
+}
 
+.score{
+    background-color: rgb(78, 20, 92);
+    text-align: center;
+    border-style: solid;
+    font-weight: bold;
+    height: 100%;
+    font-size: 150%;
+    border-color: black;
+    color: white;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+
+.team1 {
+    text-align: right;
+    margin-right: 2%;
+}
+
+.team2 {
+    text-align: left;
+    margin-left: 2%;
+}
+
+.team1-img {
+    width: 40px;
 }
