@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fixture } from '../../models/Fixture';
+import { FixturesService } from '../../services/fixtures.service';
 
 @Component({
   selector: 'app-fixtures',
@@ -10,37 +11,14 @@ export class FixturesComponent implements OnInit {
 
   fixtures: Fixture[];
 
-  constructor() {
+  constructor(private fixtureService:FixturesService) {
     this.fixtures = [];
    }
 
   ngOnInit(): void {
-    this.fixtures = [
-      {
-        id: 1,
-        team1: "Manchester United",
-        team2: "Chelsea",
-        t1Score: 2,
-        t2Score: 0,
-        time:"15:00" 
-      },
-      {
-        id: 2,
-        team1: "Everton",
-        team2: "Crystal Palice",
-        t1Score: 1,
-        t2Score: 1,
-        time:"10:00" 
-      },
-      {
-        id: 3,
-        team1: "Liverpool",
-        team2: "Leeds United",
-        t1Score: 4,
-        t2Score: 3,
-        time:"7:30" 
-      }
-    ];
+     this.fixtureService.getFixtures().subscribe(fixtures => {
+      this.fixtures = fixtures;
+    });
   }
 
 }

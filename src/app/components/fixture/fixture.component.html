@@ -2,18 +2,16 @@
     <div class="fixture">
         <div class="fix">
             <div class="">
-                <p class="team1">{{ fixture.team1 }} <img class="team1-img" src="../../../assets/680.png"></p>
-                
+                <p class="team1">{{ getNameAt((fixture.team_h)) }} <img class="team1-img" src="../../../assets/{{getBadgeAt((fixture.team_h))}}"></p>
             </div>
             <div class="">
-                <p class="score" id="score">0</p>
+                <p class="score" id="score" >{{ fixture.team_h_score }}</p>
             </div>
             <div class="">
-                <p class="score" id="score">0</p>
+                <p class="score" id="score">{{ fixture.team_a_score }}</p>
             </div>
             <div class="">
-                <p class="team2" id="team"> <img class="team1-img" src="../../../assets/630.png"> {{ fixture.team2 }} </p>
-                
+                <p class="team2" id="team"> <img class="team1-img" src="../../../assets/{{getBadgeAt((fixture.team_a))}}"> {{ getNameAt((fixture.team_a)) }} </p>               
             </div>     
         </div>
 </div>
