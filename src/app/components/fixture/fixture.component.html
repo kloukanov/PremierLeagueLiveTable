@@ -4,12 +4,19 @@
             <div class="">
                 <p class="team1">{{ getNameAt((fixture.team_h)) }} <img class="team1-img" src="../../../assets/{{getBadgeAt((fixture.team_h))}}"></p>
             </div>
-            <div class="">
-                <p class="score" id="score" >{{ fixture.team_h_score }}</p>
+            <div class="scores" *ngIf="fixture.started!=false; else elseBlock">
+                <div>
+                    <p class="score">{{ fixture.team_h_score }}</p>
+                </div>
+                <div>
+                    <p class="score">{{ fixture.team_a_score }}</p>
+                </div>
             </div>
-            <div class="">
-                <p class="score" id="score">{{ fixture.team_a_score }}</p>
-            </div>
+            <ng-template #elseBlock> 
+                <div class="time">
+                    {{ fixture.kickoff_time | date:'EE d, H:mm' }}
+                </div> 
+            </ng-template>
             <div class="">
                 <p class="team2" id="team"> <img class="team1-img" src="../../../assets/{{getBadgeAt((fixture.team_a))}}"> {{ getNameAt((fixture.team_a)) }} </p>               
             </div>     

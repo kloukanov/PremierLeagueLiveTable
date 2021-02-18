@@ -4,6 +4,17 @@
 }
 
 .container{
-    background-color: blanchedalmond;
     text-align: center;
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+.navigation{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.btn-success{
+    margin: 5%;
 }

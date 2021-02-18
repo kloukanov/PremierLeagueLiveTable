@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+        <h1>TABLE</h1>
+        <div>
+            <table class="tbl">
+                <tr>
+                    <th>Position</th>
+                    <th>Team</th>
+                    <th>Played</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GD</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>
+                        <app-team *ngFor="let team of teamNames" [team]="team"></app-team>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</div>

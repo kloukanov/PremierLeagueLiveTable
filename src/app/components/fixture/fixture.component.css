@@ -5,10 +5,11 @@
 
 .fix {
     display: grid;
-    grid-template-columns: 45% 5% 5% 45%;
-    border-radius: 5px;
+    grid-template-columns: 40% 20% 40%;
     border-style:hidden;
-    margin-bottom: 0.5%;
+    margin-bottom: 2%;
+    padding: 1%;
+    background-color: rgb(72, 75, 71);
 }
 
 .score{
@@ -24,17 +25,35 @@
     margin-left: 2%;
 }
 
+.scores {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 
 .team1 {
     text-align: right;
     margin-right: 2%;
+    font-size: large;
 }
 
 .team2 {
     text-align: left;
     margin-left: 2%;
+    font-size: large;
 }
 
 .team1-img {
     width: 40px;
+}
+
+.time {
+    background-color: rgb(78, 20, 92);
+    text-align: center;
+    border-style: solid;
+    font-weight: bold;
+    border-color: black;
+    color: white;
+    margin-right: 2%;
+    margin-left: 2%;
 }

@@ -1,9 +1,12 @@
 <div class="container">
     <div>
         <h1>FIXTURES</h1>
+        <div class="navigation">
+            <button class="btn-success" (click)="getPreviousWeekFixtures()">Previous Week</button>
+            <button class="btn-success" (click)="getNextWeekFixtures()">Next Week</button>
+        </div>
         <ul>
             <app-fixture *ngFor="let fixture of fixtures" [fixture]="fixture"></app-fixture>
-
         </ul>
     </div>
 </div>
